@@ -226,21 +226,43 @@
 
      <!-- Hero Section  -->
     <section id="home" class="section">
-        <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
-            <div class="fade-in-up">
-                <p class="text-cyan-400 text-lg mb-4">Hi, my name is</p>
-                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold mb-4">Abu Sufian</h1>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-400 mb-6">Flutter Developer</h2>
-                <p class="text-slate-400 text-lg max-w-2xl mb-8 leading-relaxed">
-                    Highly motivated and detail-oriented Flutter Developer with a strong passion for creating innovative and user-friendly mobile applications. Proficient in Flutter framework, Dart programming language, and UI/UX design principles.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#contact" class="btn-primary">Get In Touch</a>
-                    <a href="#projects" class="btn-primary" style="background: transparent; border: 2px solid #06b6d4;">View Projects</a>
-                </div>
+    <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center fade-in-up">
+
+        <!-- LEFT CONTENT -->
+        <div>
+            <p class="text-cyan-400 text-lg mb-4">Hi, my name is</p>
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold mb-4">Abu Sufian</h1>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-400 mb-6">
+            Flutter Developer
+            </h2>
+            <p class="text-slate-400 text-lg max-w-2xl mb-8 leading-relaxed">
+            Highly motivated and detail-oriented Flutter Developer with a strong passion for creating innovative and user-friendly mobile applications.
+            </p>
+            <div class="flex flex-wrap gap-4">
+            <a href="#contact" class="btn-primary">Get In Touch</a>
+            <a href="#projects" class="btn-primary border-2 border-cyan-400 bg-transparent">
+                View Projects
+            </a>
             </div>
         </div>
+
+        <!-- RIGHT IMAGE (hidden on mobile) -->
+        <div class="hidden lg:flex justify-center">
+            <div class="relative">
+            <div class="absolute inset-0 rounded-2xl border-2 border-cyan-400 translate-x-4 translate-y-4"></div>
+            <img
+                src="assets/images/profile.jpg"
+                alt="Abu Sufian"
+                class="relative z-10 w-80 h-96 object-cover rounded-2xl bg-slate-800"
+            />
+            </div>
+        </div>
+
+        </div>
+    </div>
     </section>
+
 
      <!-- About Section  -->
     <section id="about" class="section bg-slate-900/30">

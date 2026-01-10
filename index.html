@@ -181,6 +181,22 @@
             background: rgba(6, 182, 212, 0.2);
             transform: translateY(-3px);
         }
+    /* Modal animation */
+        @keyframes modalFadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+        }
+
+        .modal-animate {
+        animation: modalFadeIn 0.25s ease-out;
+        }
+        
     </style>
 </head>
 <body>
@@ -549,7 +565,7 @@
     <div id="projectModal"
         class="fixed inset-0 bg-black/80 hidden z-50 flex items-center justify-center px-4">
 
-    <div class="bg-slate-900 w-full max-w-4xl rounded-xl p-6 relative">
+    <div id="modalBox" class="bg-slate-900 w-full max-w-4xl rounded-xl p-6 relative modal-animate">
 
         <!-- Close -->
         <button onclick="closeProjectModal()"
@@ -1034,6 +1050,42 @@
     function prevImage() {
     index = (index - 1 + images.length) % images.length;
     modalImage.src = images[index];
+    }
+
+    /* ESC key close */
+    document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        closeProjectModal();
+    }
+    });
+
+    /* Click outside modal close */
+    projectModal.addEventListener("click", (e) => {
+    if (e.target === projectModal) {
+        closeProjectModal();
+    }
+    });
+
+ // MOBILE SWIPE SUPPORT (IMAGE SLIDER)
+ 
+    let startX = 0;
+    let endX = 0;
+
+    modalImage.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+    });
+
+    modalImage.addEventListener("touchend", (e) => {
+    endX = e.changedTouches[0].clientX;
+    handleSwipe();
+    });
+
+    function handleSwipe() {
+    if (startX - endX > 50) {
+        nextImage(); // swipe left
+    } else if (endX - startX > 50) {
+        prevImage(); // swipe right
+    }
     }
 
     </script>

@@ -77,11 +77,14 @@
         .skill-tag {
             background: rgba(6, 182, 212, 0.1);
             color: #06b6d4;
-            padding: 0.5rem 1rem;
+            padding: 0.5rem 0.75rem;
             border-radius: 6px;
             font-size: 0.875rem;
             border: 1px solid rgba(6, 182, 212, 0.2);
             transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         .skill-tag:hover {
@@ -181,20 +184,20 @@
             background: rgba(6, 182, 212, 0.2);
             transform: translateY(-3px);
         }
-    /* Modal animation */
+
         @keyframes modalFadeIn {
-        from {
-            opacity: 0;
-            transform: scale(0.95);
-        }
-        to {
-            opacity: 1;
-            transform: scale(1);
-        }
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         .modal-animate {
-        animation: modalFadeIn 0.25s ease-out;
+            animation: modalFadeIn 0.25s ease-out;
         }
         
     </style>
@@ -263,7 +266,7 @@
             </div>
         </div>
 
-        <!-- RIGHT IMAGE (hidden on mobile) -->
+        <!-- RIGHT IMAGE -->
         <div class="hidden lg:flex justify-center">
             <div class="relative">
             <div class="absolute inset-0 rounded-2xl border-2 border-cyan-400 translate-x-4 translate-y-4"></div>
@@ -271,6 +274,7 @@
                 src="assets/images/my_picture.jpg"
                 alt="Abu Sufian"
                 class="relative z-10 w-80 h-96 object-cover rounded-2xl bg-slate-800"
+                onerror="this.src='https://via.placeholder.com/320x384?text=Profile'"
             />
             </div>
         </div>
@@ -284,7 +288,6 @@
     <section id="about" class="section bg-slate-900/30">
         <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl font-bold mb-12">
-                <!-- <span class="gradient-text">01.</span>  -->
                 About Me
             </h2>
             <div class="grid md:grid-cols-2 gap-12">
@@ -337,7 +340,6 @@
     <section id="experience" class="section">
         <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl font-bold mb-12">
-                <!-- <span class="gradient-text">02.</span>  -->
                 Experience
             </h2>
             <div class="relative pl-8">
@@ -378,7 +380,7 @@
                         </li>
                     </ul>
                 </div>
-                <!-- second line -->
+                
                  <div class="card relative mb-8">
                     <div class="timeline-dot"></div>
                     <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
@@ -419,16 +421,13 @@
     <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl sm:text-4xl font-bold mb-12">Projects</h2>
 
-        <!-- GRID (IMPORTANT) -->
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <!-- Project 1 -->
+        <!-- Project 1: BD BOOKS -->
         <div class="card project-card cursor-pointer" data-project="bdbooks">
             <div class="flex items-center justify-between mb-4">
-            <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-            </svg>
-            <span class="text-xs text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded">Published</span>
+                <img src="assets/images/BDbooks/bdbook_logo.png" alt="BD BOOKS Logo" class="w-12 h-12 rounded-lg object-cover" onerror="this.src='https://via.placeholder.com/48?text=BD'">
+                <span class="text-xs text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded">Published</span>
             </div>
             <h3 class="text-xl font-semibold mb-2">BD BOOKS</h3>
             <p class="text-slate-400 text-sm mb-4">
@@ -441,14 +440,11 @@
             </div>
         </div>
 
-        <!-- Project 2 -->
+        <!-- Project 2: TRSP -->
         <div class="card project-card cursor-pointer" data-project="trsp">
             <div class="flex items-center justify-between mb-4">
-            <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                             d="M4 7l8-3 8 3-8 3-8-3zm0 5l8-3 8 3-8 3-8-3zm0 5l8-3 8 3-8 3-8-3M12 2v2m-3 0h6m-4"></path>
-            </svg>
-            <span class="text-xs text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded">Published</span>
+                <img src="assets/images/TRSP/trsp_logo.png" alt="TRSP Logo" class="w-12 h-12 rounded-lg object-cover" onerror="this.src='https://via.placeholder.com/48?text=TRSP'">
+                <span class="text-xs text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded">Published</span>
             </div>
             <h3 class="text-xl font-semibold mb-2">TRSP</h3>
             <p class="text-slate-400 text-sm mb-4">
@@ -461,11 +457,11 @@
             </div>
         </div>
 
-        <!-- Project 3 -->
+        <!-- Project 3: TimeCare -->
         <div class="card project-card cursor-pointer" data-project="timecare">
             <div class="flex items-center justify-between mb-4">
             <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 21h16a1 1 0 001-1V7l-8-4-8 4v13a1 1 0 001 1zm7-11h2v2h2v2h-2v2h-2v-2H9v-2h2v-2z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 21h16a1 1 0 001-1V7l-8-4-8 4v13a1 1 0 001 1zm7-11h2v2h2v2h-2v2h-2v-2H9v-2h2v-2z"></path>
             </svg>
             <span class="text-xs text-green-400 bg-green-400/10 px-2 py-1 rounded">Company Personal</span>
             </div>
@@ -480,13 +476,11 @@
             </div>
         </div>
 
-        <!-- Project 4 -->
+        <!-- Project 4: BigBangExamCare -->
         <div class="card project-card cursor-pointer" data-project="bigbang">
             <div class="flex items-center justify-between mb-4">
-            <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
-            </svg>
-            <span class="text-xs text-green-400 bg-green-400/10 px-2 py-1 rounded">Company Personal</span>
+                <img src="assets/images/BigBangExamCare/BigBangExamCare_logo.png" alt="BigBangExamCare Logo" class="w-12 h-12 rounded-lg object-cover" onerror="this.src='https://via.placeholder.com/48?text=BB'">
+                <span class="text-xs text-green-400 bg-green-400/10 px-2 py-1 rounded">Company Personal</span>
             </div>
             <h3 class="text-xl font-semibold mb-2">BigBangExamCare</h3>
             <p class="text-slate-400 text-sm mb-4">
@@ -499,13 +493,11 @@
             </div>
         </div>
 
-        <!-- Project 5 -->
+        <!-- Project 5: TRSPExamLab -->
         <div class="card project-card cursor-pointer" data-project="examlab">
             <div class="flex items-center justify-between mb-4">
-            <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
-            </svg>
-            <span class="text-xs text-green-400 bg-green-400/10 px-2 py-1 rounded">Company Personal</span>
+                <img src="assets/images/TRSPExamLab/TRSPExamLab_logo.png" alt="TRSPExamLab Logo" class="w-12 h-12 rounded-lg object-cover" onerror="this.src='https://via.placeholder.com/48?text=TL'">
+                <span class="text-xs text-green-400 bg-green-400/10 px-2 py-1 rounded">Company Personal</span>
             </div>
             <h3 class="text-xl font-semibold mb-2">TRSPExamLab</h3>
             <p class="text-slate-400 text-sm mb-4">
@@ -518,11 +510,11 @@
             </div>
         </div>
 
-        <!-- Project 6 -->
+        <!-- Project 6: PMS -->
         <div class="card project-card cursor-pointer" data-project="pms">
             <div class="flex items-center justify-between mb-4">
             <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
             </svg>
             <span class="text-xs text-purple-400 bg-purple-400/10 px-2 py-1 rounded">Desktop</span>
             </div>
@@ -537,14 +529,11 @@
             </div>
         </div>
 
-        <!-- Project 7 -->
+        <!-- Project 7: LastPrice -->
         <div class="card project-card cursor-pointer" data-project="lastprice">
             <div class="flex items-center justify-between mb-4">
-            <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                            d="M7 7h5l7 7-5 5-7-7V7zM7 7a2 2 0 00-2 2v5m4-4a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"></path>
-            </svg>
-            <span class="text-xs text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded">Local</span>
+                <img src="assets/images/LastPrice/LastPrice_logo.png" alt="LastPrice Logo" class="w-12 h-12 rounded-lg object-cover" onerror="this.src='https://via.placeholder.com/48?text=LP'">
+                <span class="text-xs text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded">Local</span>
             </div>
             <h3 class="text-xl font-semibold mb-2">LastPrice</h3>
             <p class="text-slate-400 text-sm mb-4">
@@ -558,12 +547,11 @@
             </div>
         </div>
 
-        <!-- Project 7 -->
+        <!-- Project 8: Subscription Manager -->
         <div class="card project-card cursor-pointer" data-project="subscription_manager">
             <div class="flex items-center justify-between mb-4">
             <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                             d="M3 10h2a7 7 0 0112.906-2H15a1 1 0 100 2h5a1 1 0 001-1V4a1 1 0 10-2 0v2.126A9 9 0 005 10zm18 4h-2a7 7 0 01-12.906 2H9a1 1 0 100-2H4a1 1 0 00-1 1v5a1 1 0 102 0v-2.126A9 9 0 0019 14z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h2a7 7 0 0112.906-2H15a1 1 0 100 2h5a1 1 0 001-1V4a1 1 0 10-2 0v2.126A9 9 0 005 10zm18 4h-2a7 7 0 01-12.906 2H9a1 1 0 100-2H4a1 1 0 00-1 1v5a1 1 0 102 0v-2.126A9 9 0 0019 14z"></path>
             </svg>
             <span class="text-xs text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded">Company personal</span>
             </div>
@@ -579,15 +567,17 @@
             </div>
         </div>
 
-        <!-- Project 8 -->
+        <!-- Project 9: AdiBook -->
         <div class="card project-card cursor-pointer" data-project="adibook">
             <div class="flex items-center justify-between mb-4">
-            <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4a8 8 0 00-8 8v1a1 1 0 001 1h2a2 2 0 012 2v1a1 1 0 001 1h4a1 1 0 001-1v-1a2 2 0 012-2h2a1 1 0 001-1v-1a8 8 0 00-8-8zm-4 6a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm8 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"></path>
-            </svg>
-            <span class="text-xs text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded">Company Personal</span>
+                <img src="assets/images/Adibook/Adibook_logo.png" alt="AdiBook Logo" class="w-12 h-12 rounded-lg object-cover" onerror="this.src='https://via.placeholder.com/48?text=AB'">
+                <span class="text-xs text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded">Published</span>
             </div>
-            <h3 class="text-xl font-semibold mb-2">AdiBook - Driving School App</h3>
+            <h3 class="text-xl font-semibold mb-1">AdiBook - Driving School App</h3>
+            <div class="flex gap-2 mb-3">
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">For Student</span>
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">For Instructor</span>
+            </div>
             <p class="text-slate-400 text-sm mb-4">
             App allowing students to book driving lessons, view progress, and schedule sessions with online payment integration.
             </p>
@@ -595,7 +585,6 @@
             <span class="skill-tag text-xs">Flutter</span>
             <span class="skill-tag text-xs">SQLite</span>
             <span class="skill-tag text-xs">REST API</span>
-            <span class="skill-tag text-xs">Payment</span>
             </div>
         </div>
 
@@ -608,7 +597,7 @@
     <div id="projectModal"
         class="fixed inset-0 bg-black/80 hidden z-50 flex items-center justify-center px-4">
 
-    <div id="modalBox" class="bg-slate-900 w-full max-w-4xl rounded-xl p-6 relative modal-animate">
+    <div id="modalBox" class="bg-slate-900 w-full max-w-4xl rounded-xl p-6 relative modal-animate max-h-[90vh] overflow-y-auto">
 
         <!-- Close -->
         <button onclick="closeProjectModal()"
@@ -619,7 +608,7 @@
         <!-- Image Slider -->
         <div class="relative mb-6">
         <img id="modalImage"
-            class="w-full h-72 object-cover rounded-lg">
+            class="w-full h-72 object-cover rounded-lg" onerror="this.src='https://via.placeholder.com/800x400?text=Project+Preview'">
 
         <button onclick="prevImage()"
             class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 px-3 py-2 rounded">◀</button>
@@ -640,10 +629,9 @@
         <strong>Technologies:</strong> <span id="modalTech"></span>
         </p>
 
-        <!-- Buttons -->
-        <div class="flex gap-4 mt-6">
-        <button id="playstoreBtn" class="btn-primary"></button>
-        <button id="githubBtn" class="btn-primary"></button>
+        <!-- Dynamic Link Buttons Container -->
+        <div id="modalLinks" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-6">
+            <!-- Buttons injected here via JS -->
         </div>
     </div>
     </div>
@@ -652,7 +640,6 @@
     <section id="skills" class="section">
         <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl font-bold mb-12">
-                <!-- <span class="gradient-text">04.</span>  -->
                 Technical Skills
             </h2>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -660,10 +647,22 @@
                 <div class="card">
                     <h3 class="text-xl font-semibold mb-4 text-cyan-400">Programming Languages</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag">Dart</span>
-                        <span class="skill-tag">Flutter</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Kotlin</span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+                            Dart
+                        </span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.33 6L11.32 9.01 14.33 12l2.98-3.02L14.33 6zM8.1 12.18L4.35 15.93 8.1 19.68 11.85 15.93 8.1 12.18z"/></svg>
+                            Flutter
+                        </span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.97 4.44c-.32.18-.71.18-1.03 0l-7.97-4.44A1.025 1.025 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.97-4.44c.32-.18.71-.18 1.03 0l7.97 4.44c.32.18.53.51.53.88v9z"/></svg>
+                            Java
+                        </span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L1 12l11 11 11-11L12 1zm0 4.8L18.2 12 12 18.2 5.8 12 12 5.8z"/></svg>
+                            Kotlin
+                        </span>
                     </div>
                 </div>
 
@@ -671,10 +670,18 @@
                 <div class="card">
                     <h3 class="text-xl font-semibold mb-4 text-cyan-400">Frameworks & Libraries</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag">Flutter Framework</span>
-                        <span class="skill-tag">RESTful APIs</span>
-                        <span class="skill-tag">Firebase</span>
-                        <span class="skill-tag">SQLite</span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16m-7 5h7"/></svg>
+                            RESTful APIs
+                        </span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4 5v14l8 3 8-3V5l-8-3zm0 4l6 2.25V17.1L12 19.35l-6-2.25V8.25L12 6z"/></svg>
+                            Firebase
+                        </span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7v10c0 1.66 3.58 3 8 3s8-1.34 8-3V7M4 7c0 1.66 3.58 3 8 3s8-1.34 8-3M4 7c0-1.66 3.58-3 8-3s8 1.34 8 3m0 5c0 1.66-3.58 3-8 3s-8-1.34-8-3"/></svg>
+                            SQLite
+                        </span>
                     </div>
                 </div>
 
@@ -682,11 +689,26 @@
                 <div class="card">
                     <h3 class="text-xl font-semibold mb-4 text-cyan-400">Frontend & UI/UX</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag">UI/UX Design</span>
-                        <span class="skill-tag">Responsive Design</span>
-                        <span class="skill-tag">Widget Development</span>
-                        <span class="skill-tag">Figma</span>
-                        <span class="skill-tag">Adobe XD</span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                            UI/UX Design
+                        </span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+                            Responsive
+                        </span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-3"/></svg>
+                            Widgets
+                        </span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C9.24 2 7 4.24 7 7c0 2.76 2.24 5 5 5s5-2.24 5-5c0-2.76-2.24-5-5-5zm0 10c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z"/></svg>
+                            Figma
+                        </span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L0 12l12 12 12-12L12 0zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
+                            Adobe XD
+                        </span>
                     </div>
                 </div>
 
@@ -694,9 +716,18 @@
                 <div class="card">
                     <h3 class="text-xl font-semibold mb-4 text-cyan-400">State Management</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag">GetX</span>
-                        <span class="skill-tag">Provider</span>
-                        <span class="skill-tag">Riverpod</span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                            GetX
+                        </span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                            Provider
+                        </span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4.5 12a7.5 7.5 0 0015 0 7.5 7.5 0 00-15 0z"/><path d="M12 9v6m-3-3h6"/></svg>
+                            Riverpod
+                        </span>
                     </div>
                 </div>
 
@@ -704,12 +735,30 @@
                 <div class="card">
                     <h3 class="text-xl font-semibold mb-4 text-cyan-400">Development Tools</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag">GitHub</span>
-                        <span class="skill-tag">GitLab</span>
-                        <span class="skill-tag">VS Code</span>
-                        <span class="skill-tag">Android Studio</span>
-                        <span class="skill-tag">Xcode</span>
-                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                            GitHub
+                        </span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.955 13.587l-1.342-3.225L12 2.471 1.387 10.362.045 13.587l1.342 3.225L12 21.529l10.613-4.717 1.342-3.225z"/></svg>
+                            GitLab
+                        </span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.15 2.58L19.85 21.42C19.7 22.3 18.75 22.8 17.9 22.4L12 19.8L6.1 22.4C5.25 22.8 4.3 22.3 4.15 21.42L.85 2.58C.7 1.6 1.6.8 2.5.95L12 2.5L21.5.95C22.4.8 23.3 1.6 23.15 2.58z"/></svg>
+                            VS Code
+                        </span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-3"/></svg>
+                            Android Studio
+                        </span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4 5v14l8 3 8-3V5l-8-3zm0 4l6 2.25V17.1L12 19.35l-6-2.25V8.25L12 6z"/></svg>
+                            Xcode
+                        </span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            Postman
+                        </span>
                     </div>
                 </div>
 
@@ -717,11 +766,26 @@
                 <div class="card">
                     <h3 class="text-xl font-semibold mb-4 text-cyan-400">AI & Soft Skills</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag">AI Integration</span>
-                        <span class="skill-tag">ChatGPT</span>
-                        <span class="skill-tag">Problem-Solving</span>
-                        <span class="skill-tag">Collaboration</span>
-                        <span class="skill-tag">Critical Thinking</span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0012 18.75c-1.03 0-1.9-.4-2.59-1.053l-.547-.547z"/></svg>
+                            AI Integration
+                        </span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+                            ChatGPT
+                        </span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 15l-3.5 3.5m0-7l7 7M12 3v1m6.364 1.636l-.707.707"/></svg>
+                            Problem-Solving
+                        </span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2m16-10a4 4 0 11-8 0 4 4 0 018 0zm4 10v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"/></svg>
+                            Collaboration
+                        </span>
+                        <span class="skill-tag">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                            Thinking
+                        </span>
                     </div>
                 </div>
             </div>
@@ -732,7 +796,6 @@
     <section id="education" class="section bg-slate-900/30">
         <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl font-bold mb-12">
-                <!-- <span class="gradient-text">05.</span>  -->
                 Education
             </h2>
             <div class="space-y-6">
@@ -799,7 +862,6 @@
     <section id="contact" class="section">
         <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl sm:text-4xl font-bold mb-6">
-                <!-- <span class="gradient-text">06.</span>  -->
                 Get In Touch
             </h2>
             <p class="text-slate-400 text-lg max-w-2xl mx-auto mb-8">
@@ -832,31 +894,28 @@
                     <p class="text-slate-300 mt-1">Mirpur 1, Dhaka</p>
                 </div>
 
-                <a href="https://www.linkedin.com/in/abusufiancse">
-                <div class="card text-center">
+                <a href="https://www.linkedin.com/in/abusufiancse" target="_blank" class="block">
+                <div class="card text-center h-full">
                     <svg class="w-8 h-8 text-cyan-400 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                         d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4V9h4v1.5A4.5 4.5 0 0116 8zM6 9H2v12h4V9zM4 3a2 2 0 110 4 2 2 0 010-4z"></path>
-
                     </svg>
                     <p class="text-sm text-slate-400">linkedin</p>
                     <p class="text-slate-300 mt-1">abusufiancse</p>
-                </div>
-            </div> </a>
+                </div> </a>
+            </div>
 
             <a href="assets/resume/Flutter Developer_Resume Abu Sufian.pdf"
                 download
-                class="card text-center block hover:border-cyan-400 transition">
-
+                class="card text-center max-w-xs mx-auto block hover:border-cyan-400 transition">
                     <svg class="w-8 h-8 text-cyan-400 mx-auto mb-3"
                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
                     </svg>
-
                     <p class="text-sm text-slate-400">Resume</p>
                     <p class="text-slate-300 mt-1">Download PDF</p>
-                </a>
+            </a>
         </div>
     </section>
 
@@ -867,7 +926,7 @@
             <div class="flex justify-center gap-6">
                 <a href="https://github.com/abusufiancse" target="_blank" class="text-slate-400 hover:text-cyan-400 transition-colors">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.931 0-1.311.465-2.381 1.235-3.221-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92-.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12z"/>
                     </svg>
                 </a>
                 <a href="https://linkedin.com/in/abusufiancse" target="_blank" class="text-slate-400 hover:text-cyan-400 transition-colors">
@@ -966,8 +1025,9 @@
         "assets/projects/bdbooks/1.png",
         "assets/projects/bdbooks/2.png"
         ],
-        playstore: "https://play.google.com/store/apps/details?id=bdbooks",
-        github: ""
+        links: [
+            { label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.bdbooks" }
+        ]
     },
 
     trsp: {
@@ -978,8 +1038,9 @@
         images: [
         "assets/projects/trsp/1.png"
         ],
-        playstore: "https://play.google.com/store/apps/details?id=trsp",
-        github: ""
+        links: [
+            { label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.trsp&hl=en" }
+        ]
     },
 
     timecare: {
@@ -990,89 +1051,102 @@
         images: [
         "assets/projects/timecare/1.png"
         ],
-        playstore: "",
-        github: "https://github.com/abusufiancse/timecare"
+        links: [
+            { label: "GitHub", url: "https://github.com/abusufiancse/timecare" }
+        ]
     },
-  bigbang: {
-    title: "BigBangExamCare",
-    desc: "BigBangExamCare is a complete exam preparation and management platform designed for students. It supports mock exams, performance tracking, result analysis, and secure authentication.",
-    platform: "Android",
-    tech: "Flutter, Provider, Firebase",
-    images: [
-      "assets/projects/bigbang/1.png",
-      "assets/projects/bigbang/2.png"
-    ],
-    playstore: "",
-    github: ""
-  },
+    bigbang: {
+        title: "BigBangExamCare",
+        desc: "BigBangExamCare is a complete exam preparation and management platform designed for students. It supports mock exams, performance tracking, result analysis, and secure authentication.",
+        platform: "Android",
+        tech: "Flutter, Provider, Firebase",
+        images: [
+        "assets/projects/bigbang/1.png",
+        "assets/projects/bigbang/2.png"
+        ],
+        links: []
+    },
 
-  examlab: {
-    title: "TRSPExamLab",
-    desc: "TRSPExamLab is an online examination and laboratory management system enabling secure exams, automated evaluation, and real-time monitoring.",
-    platform: "Android",
-    tech: "Flutter, Riverpod, REST API",
-    images: [
-      "assets/projects/examlab/1.png",
-      "assets/projects/examlab/2.png"
-    ],
-    playstore: "",
-    github: ""
-  },
+    examlab: {
+        title: "TRSPExamLab",
+        desc: "TRSPExamLab is an online examination and laboratory management system enabling secure exams, automated evaluation, and real-time monitoring.",
+        platform: "Android",
+        tech: "Flutter, Riverpod, REST API",
+        images: [
+        "assets/projects/examlab/1.png",
+        "assets/projects/examlab/2.png"
+        ],
+        links: []
+    },
 
-  pms: {
-    title: "Product Management System",
-    desc: "A desktop-based product inventory and management system supporting stock control, reporting, and offline data persistence.",
-    platform: "Windows",
-    tech: "Flutter Desktop, SQLite",
-    images: [
-      "assets/projects/pms/1.png",
-      "assets/projects/pms/2.png"
-    ],
-    playstore: "",
-    github: "https://github.com/abusufiancse/product-management-system"
-  },
+    pms: {
+        title: "Product Management System",
+        desc: "A desktop-based product inventory and management system supporting stock control, reporting, and offline data persistence.",
+        platform: "Windows",
+        tech: "Flutter Desktop, SQLite",
+        images: [
+        "assets/projects/pms/1.png",
+        "assets/projects/pms/2.png"
+        ],
+        links: [
+            { label: "GitHub", url: "https://github.com/abusufiancse/product-management-system" }
+        ]
+    },
 
     lastprice: {
-    title: "LastPrice",
-    desc: " B2B buying and selling product from productions source to Retailer seller online payment integration.",
-    platform: "Android / Windows",
-    tech: "Flutter Desktop, SQLite",
-    images: [
-      "assets/projects/lastprice/1.png",
-      "assets/projects/lastprice/2.png"
-    ],
-    playstore: "",
-    github: "https://github.com/abusufiancse/product-management-system"
-  },
+        title: "LastPrice",
+        desc: " B2B buying and selling product from productions source to Retailer seller online payment integration.",
+        platform: "Android / Windows",
+        tech: "Flutter Desktop, SQLite",
+        images: [
+        "assets/projects/lastprice/1.png",
+        "assets/projects/lastprice/2.png"
+        ],
+        links: [
+            { label: "GitHub", url: "https://github.com/abusufiancse/product-management-system" }
+        ]
+    },
 
     subscription_manager: {
-    title: "Subscription Manager",
-    desc: " Subscription Manager use for tracking using subscription services, renewal, expired and management about who using.",
-    platform: "Android / Windows",
-    tech: "Flutter Desktop, SQLite",
-    images: [
-      "assets/projects/pms/1.png",
-      "assets/projects/pms/2.png"
-    ],
-    playstore: "",
-    github: "https://github.com/abusufiancse/product-management-system"
-  },
+        title: "Subscription Manager",
+        desc: " Subscription Manager use for tracking using subscription services, renewal, expired and management about who using.",
+        platform: "Android / Windows",
+        tech: "Flutter Desktop, SQLite",
+        images: [
+        "assets/projects/pms/1.png",
+        "assets/projects/pms/2.png"
+        ],
+        links: [
+            { label: "GitHub", url: "https://github.com/abusufiancse/product-management-system" }
+        ]
+    },
 
     adibook: {
-        title: "AdiBook",
-        desc: "Driving school management app with booking, scheduling, and online payment integration.",
-        platform: "Android",
+        title: "AdiBook - Driving School App",
+        desc: "A dual-app ecosystem for driving schools. Students can book lessons, track progress, and pay online, while instructors manage their schedules and student performance.",
+        platform: "Android / iOS",
         tech: "Flutter, SQLite, REST API",
         images: [
-        "assets/projects/adibook/1.png"
+            "assets/projects/adibook/1.png"
         ],
-        playstore: "",
-        github: ""
+        links: [
+            { label: "Student App (Play Store)", url: "https://play.google.com/store/apps/details?id=com.adibook.student&hl=en" },
+            { label: "Student App (App Store)", url: "https://apps.apple.com/us/app/adi-book-student/id6743047444" },
+            { label: "Instructor App (Play Store)", url: "https://play.google.com/store/apps/details?id=com.adibook.instructor&hl=en" },
+            { label: "Instructor App (App Store)", url: "https://apps.apple.com/us/app/adi-book-instructor/id6743073433" }
+        ]
     }
     };
 
     let images = [];
     let index = 0;
+    const projectModal = document.getElementById('projectModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalPlatform = document.getElementById('modalPlatform');
+    const modalTech = document.getElementById('modalTech');
+    const modalImage = document.getElementById('modalImage');
+    const modalLinks = document.getElementById('modalLinks');
 
     // Card click
     document.querySelectorAll(".project-card").forEach(card => {
@@ -1082,41 +1156,47 @@
     });
 
     function openProject(key) {
-    const p = projects[key];
-    if (!p) return;
+        const p = projects[key];
+        if (!p) return;
 
-    projectModal.classList.remove("hidden");
+        projectModal.classList.remove("hidden");
 
-    modalTitle.textContent = p.title;
-    modalDesc.textContent = p.desc;
-    modalPlatform.textContent = p.platform;
-    modalTech.textContent = p.tech;
+        modalTitle.textContent = p.title;
+        modalDesc.textContent = p.desc;
+        modalPlatform.textContent = p.platform;
+        modalTech.textContent = p.tech;
 
-    images = p.images;
-    index = 0;
-    modalImage.src = images[0];
+        images = p.images;
+        index = 0;
+        modalImage.src = images[0];
 
-    // Play Store
-    if (p.playstore) {
-        playstoreBtn.textContent = "Play Store";
-        playstoreBtn.disabled = false;
-        playstoreBtn.onclick = () => window.open(p.playstore, "_blank");
-    } else {
-        playstoreBtn.textContent = "Not Published Yet";
-        playstoreBtn.disabled = true;
-        playstoreBtn.classList.add("opacity-50");
-    }
+        // Clear existing buttons
+        modalLinks.innerHTML = '';
 
-    // GitHub
-    if (p.github) {
-        githubBtn.textContent = "GitHub";
-        githubBtn.disabled = false;
-        githubBtn.onclick = () => window.open(p.github, "_blank");
-    } else {
-        githubBtn.innerHTML = "🔒 GitHub";
-        githubBtn.disabled = true;
-        githubBtn.classList.add("opacity-50");
-    }
+        // Generate link buttons
+        if (p.links && p.links.length > 0) {
+            p.links.forEach(link => {
+                const btn = document.createElement('a');
+                btn.href = link.url;
+                btn.target = "_blank";
+                btn.className = "btn-primary text-center py-2 px-4 text-sm flex items-center justify-center gap-2";
+                
+                // Add icon based on label
+                let icon = '🔗';
+                if (link.label.includes('Play Store')) icon = '🤖';
+                if (link.label.includes('App Store')) icon = '🍎';
+                if (link.label.includes('GitHub')) icon = '📂';
+                
+                btn.innerHTML = `<span>${icon}</span> ${link.label}`;
+                modalLinks.appendChild(btn);
+            });
+        } else {
+            // Placeholder if no links
+            const emptyState = document.createElement('div');
+            emptyState.className = "col-span-full py-4 px-6 bg-slate-800/50 rounded-lg text-slate-500 text-center italic text-sm";
+            emptyState.textContent = "🔒 Code / Links Private";
+            modalLinks.appendChild(emptyState);
+        }
     }
 
     function closeProjectModal() {
@@ -1124,11 +1204,13 @@
     }
 
     function nextImage() {
+    if (!images || images.length === 0) return;
     index = (index + 1) % images.length;
     modalImage.src = images[index];
     }
 
     function prevImage() {
+    if (!images || images.length === 0) return;
     index = (index - 1 + images.length) % images.length;
     modalImage.src = images[index];
     }
@@ -1147,8 +1229,7 @@
     }
     });
 
- // MOBILE SWIPE SUPPORT (IMAGE SLIDER)
- 
+    // MOBILE SWIPE SUPPORT (IMAGE SLIDER)
     let startX = 0;
     let endX = 0;
 
